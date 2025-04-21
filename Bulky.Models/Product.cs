@@ -19,12 +19,15 @@ namespace Bulky.Models
         [DisplayName("Product Name")]
         public string Title { get; set; }
         [Required(ErrorMessage ="ISBN is required!")]
+        [MaxLength(100)]
         public string ISBN { get; set; }
         [Required(ErrorMessage ="Author name required!")]
+        [MaxLength(100)]
         public string Author { get; set; }
 
         [ValidateNever]
         [DisplayName("Description")]
+        [MaxLength(100)]
         public string? Description { get; set; }
 
         [Required]
@@ -49,6 +52,7 @@ namespace Bulky.Models
         [ValidateNever]
         public Category Category { get; set; }
         [ValidateNever]
+        [MaxLength(100)]
         public string? ImageUrl { get; set; }
 
     }
